@@ -271,22 +271,4 @@ git clone https://github.com/HarshitPachori/ride_fast.git
   - ### [Postman Collection Link](https://restless-moon-499399.postman.co/workspace/New-Team-Workspace~c7722ba8-7049-40b0-97c9-e367daa05b43/collection/23880545-2625be57-f365-488a-934e-4d7a9fe64389?action=share&creator=23880545)   -->
 
 - ## Snapshots
-<img src="./snapshots/s1.png" />
-<img src="./snapshots/s2.png" />
-<img src="./snapshots/s5.png" />
-<img src="./snapshots/s6.png"/>
-<img src="./snapshots/s10.png"/>
-<img src="./snapshots/s11.png"/>
-<img src="./snapshots/s12.png"/>
-<img src="./snapshots/s13.png"/>
-<img src="./snapshots/s7.png"/>
-<img src="./snapshots/s8.png"/>
-<img src="./snapshots/s9.png" height="500"/>
-<img src="./snapshots/s15.png" height="500"/>
-<img src="./snapshots/s16.png"/>
-<img src="./snapshots/s17.png"/>
-<img src="./snapshots/s18.png"/>
-<img src="./snapshots/s19.png"/>
-<img src="./snapshots/s20.png"/>
-<img src="./snapshots/s21.png"/>
-<img src="./snapshots/s22.png"/>
+<img src="
