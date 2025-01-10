@@ -55,17 +55,7 @@
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-test</artifactId>
             <scope>test</scope>
-            </dependency>
-            <dependency>
-        <groupId>org.junit.jupiter</groupId>
-        <artifactId>junit-jupiter</artifactId>
-        <scope>test</scope>
-    </dependency>
-    <dependency>
-        <groupId>org.mockito</groupId>
-        <artifactId>mockito-junit-jupiter</artifactId>
-        <scope>test</scope>
-</dependency>
+        </dependency>
         <!-- JWT Dependencies -->
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
