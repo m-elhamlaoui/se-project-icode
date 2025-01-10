@@ -220,6 +220,33 @@ https://github.com/m-elhamlaoui/se-project-icode
 4. **Driver Login Page**
 5. **Driver Dashboard** (Available rides listed)
 6. **OTP Verification** (Driver enters OTP to start the ride)
+7. ![image](https://github.com/user-attachments/assets/dcf78a31-cf2b-422b-ba60-3620c134d0e8)
+8. ![image](https://github.com/user-attachments/assets/62e68559-0223-41cc-a0ba-958be6263424)
+9. ![image](https://github.com/user-attachments/assets/f71d615d-0974-443c-a73d-ac1a9309c841)
+10. ![image](https://github.com/user-attachments/assets/a0fcba68-79f5-4e98-bb9f-74e7996c1947)
+![image](https://github.com/user-attachments/assets/d8b4bff9-b736-4dff-ace3-0b7851389dbc)
+![image](https://github.com/user-attachments/assets/297ca11e-943a-406f-ad97-8b5a433d6fbb)
+![image](https://github.com/user-attachments/assets/cfa62bb2-367b-478f-9b83-7e0969333a3e)
+![image](https://github.com/user-attachments/assets/f14d804e-f710-469b-86bc-0dbe8e202147)
+![image](https://github.com/user-attachments/assets/b42fd9c5-6283-4a0a-bd90-00bebe0be50f)
+![image](https://github.com/user-attachments/assets/70424cde-6eaf-48d3-8736-9be195420bcf)
+![image](https://github.com/user-attachments/assets/55b3a25d-eb96-4878-9167-526a5131b7c5)
+![image](https://github.com/user-attachments/assets/00ed9762-8af7-42c4-b85f-b2ace2ba3ca6)
+![image](https://github.com/user-attachments/assets/d753770d-fe64-4346-8092-f6127e6c1c0d)
+![image](https://github.com/user-attachments/assets/2337b9f3-1f4f-42d8-97ab-a3b0da770c01)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Conclusion
 Morocco Drive showcases the use of modern web development technologies to solve real-world transportation challenges. The project adheres to best practices in API design, authentication, state management, and responsive UI development, making it a robust solution for cab booking and management.
