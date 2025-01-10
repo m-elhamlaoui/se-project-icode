@@ -69,34 +69,149 @@ https://github.com/m-elhamlaoui/se-project-icode
    ```
 
 ## Key Features
+## API Endpoints
 
-### API Endpoints
+- ### Register User
 
-#### User Management
-- Register User
-- Login User
+  ```java
+   @route POST /api/v1/auth/register/user
+   @desc Register New User
+   @param {String} fullname
+   @param {String} mobile
+   @param {String} email
+   @param {String} password
+   @returns {Object} User
+   @returns {StatusCode} 201 - Created
+   @returns {StatusCode} 400 - Bad Request
+  ```
 
-#### Driver Management
-- Register Driver
-- Login Driver
+- ### Login User
 
-#### Ride Management
-- Book Ride
-- Accept Ride
-- Complete Ride
+  ```java
+   @route POST /api/v1/auth/login
+   @desc Login User
+   @param {String} email
+   @param {String} password
+   @param {String} userType
+   @returns {Object} {String} accessToken, {String} refreshToken
+   @returns {StatusCode} 200 - OK
+   @returns {StatusCode} 400 - Bad Request
+   @returns {StatusCode} 404 - Not Found
+  ```
 
-### Success Responses
-- Example for User Login:
+- ### Register Driver
+
+  ```java
+   @route POST /api/v1/auth/register/driver
+   @desc Register new Driver
+   @param {String} fullname
+   @param {String} email
+   @param {String} password
+   @param {String} mobile
+   @param {double} latitude
+   @param {double} longitude
+   @param {String} licenseNumber
+   @param {String} licenseState
+   @param {String} licenseExpirationDate
+   @param {String} company
+   @param {String} model
+   @param {String} color
+   @param {int} year
+   @param {String} licensePlate
+   @param {int} capacity
+   @returns {Object} Driver
+   @returns {StatusCode} 201 - Created
+   @returns {StatusCode} 400 - Bad Request
+  ```
+
+- ### Login Driver
+
+  ```java
+   @route POST /api/v1/auth/login
+   @desc Login Driver
+   @param {String} email
+   @param {String} password
+   @param {String} userType
+   @returns {StatusCode} 200 - OK
+   @returns {StatusCode} 400 - Bad Request
+   @returns {StatusCode} 404 - Not Found
+  ```
+
+- ### Book Ride
+
+  ```java
+   @route POST /api/v1/ride/request
+   @desc Book Ride
+   @header {Authorization} jwtToken
+   @param {String} pickupArea
+   @param {String} destinationArea
+   @param {double} pickupLatitude
+   @param {double} pickupLongitude
+   @param {double} destinationLatitude
+   @param {double} destinationLongitude
+   @returns {Object} Ride
+   @returns {StatusCode} 201 - Created
+   @returns {StatusCode} 400 - Bad Request
+  ```
+
+## Responses
+
+- ### Success Responses
+
+  - <b>Login User/Driver (Success)</b>
+
+    ```json
+    {
+      "statusCode": 200,
+      "accessToken": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huQGdtYWlsLmNvbSIsImlhdCI6MTcxMDY3MjMyMSwiZXhwIjoxNzExNTcyMzIxfQ.LIc-mqKb1-RRsl4W4l4emn0GDfpSXDY1Wy6NfS9-7dY",
+      "refreshToken": "dfkjngfngn4gh5nf4z5hg4z5n5hg4xnx",
+      "message": "Got All Data Successfuly",
+      "success": true
+    }
+    ```
+
+- ### Error Responses
+
   ```json
   {
-    "message": "Login successful",
-    "token": "..."
+    "statusCode": 400,
+    "message": "All fields are required",
+    "errors": [],
+    "success": false
   }
   ```
 
-### Error Responses
-- Missing Fields
-- Unauthorized Access
+  ```json
+  {
+    "statusCode": 404,
+    "message": "Resource Not Found with given Id",
+    "errors": [],
+    "success": false
+  }
+  ```
+
+  ```json
+  {
+    "statusCode": 401,
+    "message": "You need to be logged in first in order to perform this action",
+    "errors": [],
+    "success": false
+  }
+  ```
+
+  ```json
+  {
+    "statusCode": 501,
+    "message": "Internal Server Error",
+    "errors": [],
+    "success": false
+  }
+  ```
+
+<!-- - ## Postman Collection
+
+  - ### [Postman Collection Link](https://restless-moon-499399.postman.co/workspace/New-Team-Workspace~c7722ba8-7049-40b0-97c9-e367daa05b43/collection/23880545-2625be57-f365-488a-934e-4d7a9fe64389?action=share&creator=23880545)   -->
+
 
 ## Snapshots
 1. **Authentication Page**
