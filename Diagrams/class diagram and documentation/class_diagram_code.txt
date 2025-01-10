@@ -1,0 +1,81 @@
+@startuml
+class MyUser {
+  - id: Long
+  - fullName: String
+  - email: String
+  - mobile: String
+  - password: String
+  - profilePicture: String
+  - role: UserRole
+  - currentRide: Ride
+}
+
+class Driver {
+  - id: Long
+  - name: String
+  - email: String
+  - mobile: String
+  - password: String
+  - rating: Double
+  - latitude: Double
+  - longitude: Double
+  - role: UserRole
+  - currentRide: Ride
+  - totalRevenue: Long
+}
+
+class Ride {
+  - id: Long
+  - pickupLatitude: Double
+  - pickupLongitude: Double
+  - destinationLatitude: Double
+  - destinationLongitude: Double
+  - pickupArea: String
+  - destinationArea: String
+  - status: RideStatus
+  - startTime: LocalDateTime
+  - endTime: LocalDateTime
+  - fare: Double
+  - otp: Integer
+}
+
+class Vehicle {
+  - id: Long
+  - company: String
+  - model: String
+  - color: String
+  - year: Integer
+  - licensePlate: String
+  - capacity: Integer
+}
+
+class License {
+  - id: Long
+  - licenseNumber: String
+  - licenseState: String
+  - licenseExpirationDate: String
+}
+
+class RefreshToken {
+  - id: Long
+  - refreshToken: String
+  - expirationDate: Instant
+}
+
+class Payment {
+  - id: Long
+  - amount: Double
+  - status: PaymentStatus
+  - method: String
+  - timestamp: LocalDateTime
+  + verifyPayment(): Boolean
+}
+
+MyUser "1" -- "N" Ride
+Driver "1" -- "N" Ride
+Driver "1" -- "1" License
+Driver "1" -- "1" Vehicle
+Driver "1" -- "1" RefreshToken
+MyUser "1" -- "1" RefreshToken
+Ride "1" -- "1" Payment
+@enduml

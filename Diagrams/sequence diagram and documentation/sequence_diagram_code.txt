@@ -1,0 +1,42 @@
+@startuml
+actor User
+actor Driver
+participant "RideController" as RC
+participant "RideService" as RS
+participant "DriverService" as DS
+participant "RideRepository" as RR
+participant "OTPService" as OS
+
+User -> RC: requestRide
+RC -> RS: handleRideRequest
+RS -> DS: getAvailableDrivers
+DS --> RS: availableDrivers
+RS -> RR: saveRide
+RS --> RC: RideAssigned
+
+Driver -> RC: acceptRide
+RC -> RS: handleRideAcceptance
+RS -> RR: updateRideStatus("ACCEPTED")
+RS --> RC: RideAccepted
+
+Driver -> RC: startRide
+RC -> RS: handleRideStart
+RS -> OS: validateOTP
+OS --> RS: OTP Valid
+RS -> RR: updateRideStatus("STARTED")
+RS --> RC: RideStarted
+
+Driver -> RC: completeRide
+RC -> RS: handleRideCompletion
+RS -> RR: updateRideStatus("COMPLETED")
+RS --> RC: RideCompleted
+
+Driver -> RS: calculateFare(ride)
+RS --> Driver: FareAmount
+Driver -> User: giveFareToUser
+
+User -> RC: verifyPayment(fareAmount)
+RC -> RS: handlePaymentVerification
+RS -> RR: updatePaymentStatus("VERIFIED")
+RS --> RC: PaymentVerified
+@enduml

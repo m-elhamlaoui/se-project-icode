@@ -1,0 +1,57 @@
+@startuml
+left to right direction
+actor "User" as U
+actor "Driver" as D
+actor "Admin" as A
+
+usecase "Register" as UC1
+usecase "Login" as UC2
+usecase "Request Ride" as UC3
+usecase "Accept Ride" as UC4
+usecase "Start Ride" as UC5
+usecase "Complete Ride" as UC6
+usecase "Cancel Ride" as UC7
+usecase "Verify Payment" as UC9
+usecase "View Profile" as UC10
+usecase "Manage Users" as UC11
+usecase "Manage Drivers" as UC12
+
+' System Services
+usecase "Calculate Fare" as S1
+usecase "Assign Driver" as S2
+usecase "Validate Ride OTP" as S3
+
+' Include Relationships
+UC3 --> S2 : <<include>>
+S1 --> UC9 : <<include>>
+UC5 --> UC6 : <<include>>
+UC5 --> S3 : <<include>>
+UC6 --> S1 : <<include>>
+
+' Exclude Relationships
+UC3 .> UC7 : <<exclude>>
+UC3 .> UC9 : <<exclude>>
+UC4 .> UC5 : <<exclude>>
+
+' User Relationships
+U --> UC1
+U --> UC2
+U --> UC3
+U --> UC7
+U --> UC10
+U --> UC9
+
+' Driver Relationships
+D --> UC2
+D --> UC4
+D --> UC5
+D --> UC6
+D --> UC10
+D --> UC9
+
+' Admin Relationships
+A --> UC2
+A --> UC10
+A --> UC11
+A --> UC12
+@enduml
