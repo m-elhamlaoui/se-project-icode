@@ -224,12 +224,17 @@ https://github.com/m-elhamlaoui/se-project-icode
 ## Conclusion
 Morocco Drive showcases the use of modern web development technologies to solve real-world transportation challenges. The project adheres to best practices in API design, authentication, state management, and responsive UI development, making it a robust solution for cab booking and management.
 
-## Authors
-- Zyad Fri
-- Yassir Bousseta
-- Jaafar Yeffou
-- Samia Lachgar
+
 
 ## Instructor
 - EL HAMLAOUI Mahmoud
+
+  
+## Authors
+- Zyad Fri
+- Samia Lachgar
+- Yassir Bousseta
+- Jaafar Yeffou
+
+
 
